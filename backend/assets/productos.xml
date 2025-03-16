@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<productos>
+  <producto>
+    <id>200001</id>
+    <nombre>Nintendo DS Lite</nombre>
+    <precio>4000</precio>
+    <cantidad>6</cantidad>
+    <imagen>assets/NintendoDSLite.jpg</imagen>
+  </producto>
+  <producto>
+    <id>200002</id>
+    <nombre>Nintendo Switch</nombre>
+    <precio>8000</precio>
+    <cantidad>8</cantidad>
+    <imagen>assets/NintendoSwitch.jpg</imagen>
+  </producto>
+  <producto>
+    <id>200003</id>
+    <nombre>Xbox One</nombre>
+    <precio>10000</precio>
+    <cantidad>5</cantidad>
+    <imagen>assets/XboxOne.jpg</imagen>
+  </producto>
+</productos>
