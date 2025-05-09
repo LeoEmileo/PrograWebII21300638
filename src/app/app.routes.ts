@@ -1,0 +1,13 @@
+import { Routes } from '@angular/router';
+import { ProductoComponent } from './components/producto/producto.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
+import { InventarioComponent } from './components/inventario/inventario.component';
+
+
+export const routes: Routes = [
+    { path: '', component: ProductoComponent }, // Ruta raíz
+    { path: 'carrito', component: CarritoComponent }, // Ruta al carrito
+    { path: 'inventario', component: InventarioComponent },
+    { path: 'pago-exitoso', loadComponent: () => import('./pages/pago-exitoso/pago-exitoso.component').then(m => m.PagoExitosoComponent) },
+    { path: 'pago-cancelado', loadComponent: () => import('./pages/pago-cancelado/pago-cancelado.component').then(m => m.PagoCanceladoComponent) }
+];

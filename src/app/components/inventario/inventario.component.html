@@ -1,0 +1,51 @@
+<h2>Inventario de Productos</h2>
+
+<!-- Formulario para agregar un producto nuevo -->
+<div>
+  <label>Nombre:</label>
+  <input [(ngModel)]="productoModelo.nombre" />
+
+  <label>Precio:</label>
+  <input type="number" [(ngModel)]="productoModelo.precio" />
+
+  <label>Cantidad (Stock):</label>
+  <input type="number" [(ngModel)]="productoModelo.cantidad" />
+
+  <label>Imagen (URL):</label>
+  <input [(ngModel)]="productoModelo.imagen" />
+
+  <button (click)="crearProducto()">Crear Producto</button>
+</div>
+
+<hr />
+
+<!-- Tabla para mostrar productos existentes -->
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Imagen</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of productos">
+      <td>{{ p.id }}</td>
+      <td><input [(ngModel)]="p.nombre" /></td>
+      <td><input type="number" [(ngModel)]="p.precio" /></td>
+      <td><input type="number" [(ngModel)]="p.cantidad" /></td>
+      <td><input [(ngModel)]="p.imagen" /></td>
+      <td>
+        <button (click)="modificarProducto(p)">Modificar</button>
+        <button (click)="eliminarProducto(p.id)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<button (click)="irATienda()">Volver a la Tienda</button>
+
